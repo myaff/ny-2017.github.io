@@ -6,6 +6,5 @@ node_modules/*
 src/images/*
 src/libs/*
 src/*
-fonts/*
 dist/images/*
 images/*
