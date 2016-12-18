@@ -1,2 +1,11 @@
 .sass-cache/
 *.css.map
+dis/*
+node_modules/*
+*.txt
+src/images/*
+src/libs/*
+src/*
+fonts/*
+dist/images/*
+images/*

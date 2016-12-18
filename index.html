@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="dist/styles.css">
+	<script src="dist/js/libs.min.js"></script>
+	<script src="dist/svg/sprite.js"></script>
+	<script src="dist/js/scripts.js"></script>
+</head>
+<body>
+	<div class="svg-placeholder"></div>
+	<div class="page">
+		<div class="stars">
+			<div class="stars__item stars__item-1 hidden-xs hidden-sm">
+				<div class="line"></div>
+				<svg class="star"><use xlink:href="#star" /></svg>
+			</div>
+			<div class="stars__item stars__item-2 hidden-xs hidden-sm">
+				<div class="line"></div>
+				<svg class="star"><use xlink:href="#star" /></svg>
+			</div>
+			<div class="stars__item stars__item-3 hidden-sm">
+				<div class="line"></div>
+				<svg class="star"><use xlink:href="#star" /></svg>
+			</div>
+			<div class="stars__item stars__item-4">
+				<div class="line"></div>
+				<svg class="star star--red"><use xlink:href="#star" /></svg>
+			</div>
+			<div class="stars__item stars__item-5 hidden-xs">
+				<div class="line"></div>
+				<svg class="star"><use xlink:href="#star" /></svg>
+			</div>
+			<div class="stars__item stars__item-6">
+				<div class="line"></div>
+				<svg class="ball"><use xlink:href="#ball" /></svg>
+			</div>
+			<div class="stars__item stars__item-7 hidden-xs hidden-sm">
+				<div class="line"></div>
+				<svg class="star"><use xlink:href="#star" /></svg>
+			</div>
+			<div class="stars__item stars__item-8 hidden-xs hidden-sm">
+				<div class="line"></div>
+				<svg class="star"><use xlink:href="#star" /></svg>
+			</div>
+		</div>
+		<div id="greeting" class="greeting__wrapper container">
+			<div class="greeting">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 center-block">
+						<div class="greeting__title">Привет! Это&nbsp;генератор <br/>новогодних поздравлений <br/>Лабмедиа</div>
+						<div class="greeting__text">
+							<p>Только здесь ты сможешь не только получить уникальную открытку, но и узнать обо всех возможностях, которые предоставляет наша компания.</p>
+							<p>Выбери категорию и узнай, что еще ты можешь сделать вместе с нами.</p>
+						</div>
+					</div>
+				</div>
+				<div class="greeting__tabs tabs__wrapper">
+					<div class="tabs">
+						<div class="tabs__item">
+							<button data-role="100" class="tabs__btn js-role">Я клиент</button>
+						</div>
+						<div class="tabs__item">
+							<button data-role="010" class="tabs__btn js-role">Я партнер</button>
+						</div>
+						<div class="tabs__item">
+							<button data-role="001" class="tabs__btn js-role">Я из Лабмедиа</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="form" class="form__wrapper container invis">
+			<div class="form__title">Какими возможностями Лабмедиа <br/>ты воспользовался?</div>
+			<div class="form">
+				<form data-role="100" id="form-100" class="hidden"></form>
+				<form data-role="011" id="form-011" class="hidden"></form>
+				<div class="form__body row">
+					<div class="form__col col-xs-12 col-sm-6 col-md-4">
+						<div class="form__item form__item-1 top" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="100" />
+								<div class="form__label-img bottom right"><img src="images/form-1.png" alt="picture"></div>
+								<div class="form__label-text">Реализовал <br/>уникальный <br/>курс</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-2" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="600" />
+								<div class="form__label-text">Пообедал с сотрудником Лабмедиа <br/>в корпоративной столовой</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-3" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="200" />
+								<div class="form__label-img top left"><img src="images/form-3.png" alt="picture"></div>
+								<div class="form__label-text">Воспользовался <br/>технологией <br/>поточной <br/>разработки</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-4" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="1000" />
+								<div class="form__label-text">Посмотрел портфолио <br/>на сайте Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-5" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="900" />
+								<div class="form__label-img bottom right"><img src="images/form-5.png" alt="picture"></div>
+								<div class="form__label-text">Попил кофе <br/>с печеньками <br/>в Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-6" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="800" />
+								<div class="form__label-text">Посетил выставку <br/>или конференцию <br/>с нашим участием</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-4 top" data-role="011">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-011"  form="form-011" value="4" />
+								<div class="form__label-text">Посмотрел портфолио <br/>на сайте Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-5" data-role="011">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-011"  form="form-011" value="3" />
+								<div class="form__label-img bottom right"><img src="images/form-5.png" alt="picture"></div>
+								<div class="form__label-text">Попил кофе <br/>с печеньками <br/>в Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="form__col col-xs-12 col-sm-6 col-md-4">
+						<div class="form__item form__item-7 top" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="500" />
+								<div class="form__label-text">Заказал расширенную <br/>техническую поддержку</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-8 form__item--fieldset" data-role="100">
+							<div class="form__item-title">Автоматизировал <br/>процесс</div>
+							<div class="form__fieldset">
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="401" />
+									<div class="form__label-text">Адаптации</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="402" />
+									<div class="form__label-text">Оценки персонала</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="403" />
+									<div class="form__label-text">Обучения и развития персонала</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="404" />
+									<div class="form__label-text">Развития карьеры</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="405" />
+									<div class="form__label-text">Голосования</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="406" />
+									<div class="form__label-text">Подбора персонала</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="407" />
+									<div class="form__label-text">Управления знаниями в компании</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="408" />
+									<div class="form__label-text">Планирования обучения</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+								<label class="form__label form__label--small">
+									<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="409" />
+									<div class="form__label-text">Полевого обучения</div>
+									<div class="form__check-mark">
+										<svg class="plus"><use xlink:href="#plus"/></svg>
+										<svg class="tick"><use xlink:href="#tick"/></svg>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div class="form__item form__item-9" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="700" />
+								<div class="form__label-text">Посетил день открытых <br/>дверей в Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-10" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="1100" />
+								<div class="form__label-text">
+									Подписался на Лабмедиа <br/>в 
+									<span class="soc-icon"><img src="images/fb.png" alt="facebook"/> фейсбуке</span>, 
+									<span class="soc-icon"><img src="images/yt.png" alt="youtube"/> ютубе</span>, 
+									<span class="soc-icon"><img src="images/tw.png" alt="twitter"/> твиттере</span>  или 
+									<span class="soc-icon"><img src="images/inst.png" alt="instagramm"/> инстаграмме</span>
+								</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-6 top" data-role="011">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-011"  form="form-011" value="1" />
+								<div class="form__label-text">Посетил выставку <br/>или конференцию <br/>с нашим участием</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-9" data-role="011">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-011"  form="form-011" value="2" />
+								<div class="form__label-text">Посетил день открытых <br/>дверей в Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="form__col col-xs-12 col-sm-12 col-md-4 row">
+						<div class="form__item form__item-11 col-xs-12 col-sm-6 col-md-12 top" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="300" />
+								<div class="form__label-text">Сделал симулятор <br/>или тренажер</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-12 col-xs-12 col-sm-6 col-md-12" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="1300" />
+								<div class="form__label-text">Выпил кофе или чего покрепче <br/>с одним из директоров Лабмедиа </div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-13 col-xs-12 col-sm-6 col-md-12" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="1400" />
+								<div class="form__label-text">Пригласил сотрудника <br/>Лабмедиа к себе в офис <br/>для обсуждения проекта</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-14 col-xs-12 col-sm-6 col-md-12" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="1200" />
+								<div class="form__label-img bottom left"><img src="images/form-14.png" alt="picture"></div>
+								<div class="form__label-text">Посетил <br/>вебинары <br/>экспертов <br/>Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-15 col-xs-12 col-sm-6 col-md-12" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="1500" />
+								<div class="form__label-text">Сделал с нами кейс <br/>своего проекта</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-12 col-xs-12 col-sm-6 col-md-12" data-role="100">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-100"  form="form-100" value="1600" />
+								<div class="form__label-text">Отправил благодарственное <br/>письмо за качественно <br/>сделанный проект</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-14 col-xs-12 col-sm-6 col-md-12 top" data-role="011">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-011"  form="form-011" value="6" />
+								<div class="form__label-img bottom left"><img src="images/form-14.png" alt="picture"></div>
+								<div class="form__label-text">Посетил <br/>вебинары <br/>экспертов <br/>Лабмедиа</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+						<div class="form__item form__item-16 col-xs-12 col-sm-6 col-md-12" data-role="011">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-011"  form="form-011" value="7" />
+								<div class="form__label-text">Выпил кофе или чего покрепче <br/>с одним из директоров Лабмедиа </div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="form__col col-xs-12">
+						<div class="form__item form__item-10" data-role="011">
+							<label class="form__label">
+								<input type="checkbox" class="form__checkbox" name="form-011"  form="form-011" value="5" />
+								<div class="form__label-text">
+									Подписался на Лабмедиа <br/>в 
+									<span class="soc-icon"><img src="images/fb.png" alt="facebook"/> фейсбуке</span>, 
+									<span class="soc-icon"><img src="images/yt.png" alt="youtube"/> ютубе</span>, 
+									<span class="soc-icon"><img src="images/tw.png" alt="twitter"/> твиттере</span>  или 
+									<span class="soc-icon"><img src="images/inst.png" alt="instagramm"/> инстаграмме</span>
+								</div>
+								<div class="form__check-mark">
+									<svg class="plus"><use xlink:href="#plus"/></svg>
+									<svg class="tick"><use xlink:href="#tick"/></svg>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form__footer">
+					<button class="btn btn-primary center-block js-get-card">Хочу поздравление!</button>
+				</div>
+			</div>
+		</div>
+		<div id="envelope" class="envelope__wrapper container">
+			<div class="envelope">
+				<div class="envelope__back"></div>
+				<div class="envelope__card card__wrapper">
+					<div id="card" class="card invis">
+						<div class="row">
+							<div class="card__col col-xs-12 col-md-5">
+								<div id="card-img" class="card__img"></div>
+							</div>
+							<div class="card__col col-xs-12 col-md-7">
+								<div id="card-content" class="card__content"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="envelope__front">
+					<div class="envelope__soc">
+						<ul class="soc">
+							<li class="soc__item">
+								<a href="#" class="soc__link fb"><svg class="icon"><use xlink:href="#fb"/></svg></a>
+							</li>
+							<li class="soc__item">
+								<a href="#" class="soc__link inst"><svg class="icon"><use xlink:href="#inst"/></svg></a>
+							</li>
+							<li class="soc__item">
+								<a href="#" class="soc__link vk"><svg class="icon"><use xlink:href="#vk"/></svg></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
