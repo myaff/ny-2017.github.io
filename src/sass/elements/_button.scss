@@ -1,0 +1,69 @@
+@mixin btn($color: '') {
+	display: block;
+	padding: 25px 0;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	border: 0;
+	
+	@media (min-width: $screen-xs) {
+		padding: 25px 14px;
+	}
+	
+	&:active,
+	&:focus {
+		outline: none;
+	}
+	
+	@if ($color == 'primary') {
+		@include primary-gradient;
+		@include active-shadow(4px, bottom);
+		
+		&.active {
+			@include primary-gradient(to top);
+			@include active-shadow(4px, top);
+		}
+		@include hover {
+			@include primary-gradient(to top);
+			@include active-shadow(4px, top);
+		}
+		
+	} @else {
+		@include active-gradient;
+		@include active-shadow(4px, bottom);
+		
+		&.active {
+			@include active-gradient(to top);
+			@include active-shadow(4px, top);
+		}
+		@include hover {
+			@include active-gradient(to top);
+			@include active-shadow(4px, top);
+		}
+	}
+}
+
+.btn {
+	@include btn;
+	
+	&-primary {
+		@include btn('primary');
+		font-size: 16px;
+		line-height: 24px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 37px;
+		width: 100%;
+		
+		@media (min-width: $screen-xs) {
+			padding-left: 40px;
+			padding-right: 40px;
+			width: auto;
+		}
+		@media (min-width: $screen-sm) {
+			font-size: 23px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+
+/// Примесь позволяет определить `position`, `top`, `right`, `bottom`, `left` одновременно.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {String} $position - `position` элемента
+/// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента. После ключевого слова должно быть значение длины, иначе значение будет пропущено.
+///
+/// @example scss - Использование
+/// .element {
+///	  @include position('absolute', top 0 left 1em);
+///	}
+/// .other-element {
+///	  @include position('fixed', top 1em left "WAT? A STRING?!" right 10% bottom);
+///	}
+///	@example css - Вывод CSS
+///	.element {
+///	  position: absolute;
+///	  top: 0;
+///	  left: 1em;
+///	}
+///	.other-element {
+///	  position: fixed;
+///	  top: 1em;
+///	  right: 10%;
+///	}
+@mixin position($position, $args) {
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+
+		@if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number  {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+
+	position: $position;
+}
+
+/// Примесь позволяет определить `position:absolute`, `top`, `right`, `bottom`, `left` одновременно.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента
+///
+/// @example scss - Использование
+/// .element {
+///	  @include absolute(top 0 left 1em);
+///	}
+///	@example css - Вывод CSS
+///	.element {
+///	  position: absolute;
+///	  top: 0;
+///	  left: 1em;
+///	}
+@mixin absolute($args) {
+	@include position(absolute, $args);
+}
+
+/// Примесь позволяет определить `position:fixed`, `top`, `right`, `bottom`, `left` одновременно.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента
+///
+/// @example scss - Использование
+/// .element {
+///	  @include fixed(top 1em left "WAT? A STRING?!" right 10% bottom);
+///	}
+///	@example css - Вывод CSS
+///	.element {
+///	  position: fixed;
+///	  top: 1em;
+///	  right: 10%;
+///	}
+@mixin fixed($args) {
+	@include position(fixed, $args);
+}
+
+/// Примесь позволяет определить `position:relative`, `top`, `right`, `bottom`, `left` одновременно.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {List} $args - список значений `top`, `right`, `bottom`, `left` элемента
+///
+/// @example scss - Использование
+/// .element {
+///	  @include relative(top 0 left 1em);
+///	}
+///	@example css - Вывод CSS
+///	.element {
+///	  position: relative;
+///	  top: 0;
+///	  left: 1em;
+///	}
+@mixin relative($args) {
+	@include position(relative, $args);
+}

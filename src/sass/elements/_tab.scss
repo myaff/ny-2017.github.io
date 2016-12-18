@@ -1,0 +1,42 @@
+.tabs {
+	
+	&__wrapper {
+		margin-top: 40px;
+	}
+	
+	&__btn {
+		@include btn;
+		width: 100%;
+		font-size: 13px;
+		line-height: 2;
+		font-weight: 600;
+		
+		border-width: 0 1px;
+		border-style: solid;
+		border-right-color: rgba(0,0,0,0.15);
+		border-left-color: rgba(255,255,255,0.2);
+		
+		@media (min-width: $screen-xs) {
+			font-size: 14px;
+			font-weight: 800;
+		}
+		@media (min-width: $screen-sm) {
+			font-size: 18px;
+		}
+		
+	}
+	
+	&__item {
+		width: 33.33%;
+		float: left;
+	}
+	
+	&__item:first-child &__btn {
+		border-radius: 43px 0 0 43px;
+		border-left: 0; 
+	}
+	&__item:last-child &__btn {
+		border-radius: 0 43px 43px 0;
+		border-right: 0; 
+	}
+}

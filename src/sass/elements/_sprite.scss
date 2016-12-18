@@ -1,0 +1,261 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$icon-ball-name: 'icon-ball';
+$icon-ball-x: 0px;
+$icon-ball-y: 0px;
+$icon-ball-offset-x: 0px;
+$icon-ball-offset-y: 0px;
+$icon-ball-width: 128px;
+$icon-ball-height: 176px;
+$icon-ball-total-width: 208px;
+$icon-ball-total-height: 191px;
+$icon-ball-image: 'images/sprite.png';
+$icon-ball: (0px, 0px, 0px, 0px, 128px, 176px, 208px, 191px, 'images/sprite.png', 'icon-ball', );
+$icon-fb-big-hover-name: 'icon-fb-big-hover';
+$icon-fb-big-hover-x: 168px;
+$icon-fb-big-hover-y: 40px;
+$icon-fb-big-hover-offset-x: -168px;
+$icon-fb-big-hover-offset-y: -40px;
+$icon-fb-big-hover-width: 40px;
+$icon-fb-big-hover-height: 40px;
+$icon-fb-big-hover-total-width: 208px;
+$icon-fb-big-hover-total-height: 191px;
+$icon-fb-big-hover-image: 'images/sprite.png';
+$icon-fb-big-hover: (168px, 40px, -168px, -40px, 40px, 40px, 208px, 191px, 'images/sprite.png', 'icon-fb-big-hover', );
+$icon-fb-big-name: 'icon-fb-big';
+$icon-fb-big-x: 128px;
+$icon-fb-big-y: 0px;
+$icon-fb-big-offset-x: -128px;
+$icon-fb-big-offset-y: 0px;
+$icon-fb-big-width: 40px;
+$icon-fb-big-height: 40px;
+$icon-fb-big-total-width: 208px;
+$icon-fb-big-total-height: 191px;
+$icon-fb-big-image: 'images/sprite.png';
+$icon-fb-big: (128px, 0px, -128px, 0px, 40px, 40px, 208px, 191px, 'images/sprite.png', 'icon-fb-big', );
+$icon-fb-name: 'icon-fb';
+$icon-fb-x: 190px;
+$icon-fb-y: 158px;
+$icon-fb-offset-x: -190px;
+$icon-fb-offset-y: -158px;
+$icon-fb-width: 18px;
+$icon-fb-height: 18px;
+$icon-fb-total-width: 208px;
+$icon-fb-total-height: 191px;
+$icon-fb-image: 'images/sprite.png';
+$icon-fb: (190px, 158px, -190px, -158px, 18px, 18px, 208px, 191px, 'images/sprite.png', 'icon-fb', );
+$icon-inst-big-hover-name: 'icon-inst-big-hover';
+$icon-inst-big-hover-x: 128px;
+$icon-inst-big-hover-y: 80px;
+$icon-inst-big-hover-offset-x: -128px;
+$icon-inst-big-hover-offset-y: -80px;
+$icon-inst-big-hover-width: 40px;
+$icon-inst-big-hover-height: 40px;
+$icon-inst-big-hover-total-width: 208px;
+$icon-inst-big-hover-total-height: 191px;
+$icon-inst-big-hover-image: 'images/sprite.png';
+$icon-inst-big-hover: (128px, 80px, -128px, -80px, 40px, 40px, 208px, 191px, 'images/sprite.png', 'icon-inst-big-hover', );
+$icon-inst-big-name: 'icon-inst-big';
+$icon-inst-big-x: 128px;
+$icon-inst-big-y: 120px;
+$icon-inst-big-offset-x: -128px;
+$icon-inst-big-offset-y: -120px;
+$icon-inst-big-width: 40px;
+$icon-inst-big-height: 40px;
+$icon-inst-big-total-width: 208px;
+$icon-inst-big-total-height: 191px;
+$icon-inst-big-image: 'images/sprite.png';
+$icon-inst-big: (128px, 120px, -128px, -120px, 40px, 40px, 208px, 191px, 'images/sprite.png', 'icon-inst-big', );
+$icon-inst-name: 'icon-inst';
+$icon-inst-x: 190px;
+$icon-inst-y: 140px;
+$icon-inst-offset-x: -190px;
+$icon-inst-offset-y: -140px;
+$icon-inst-width: 18px;
+$icon-inst-height: 18px;
+$icon-inst-total-width: 208px;
+$icon-inst-total-height: 191px;
+$icon-inst-image: 'images/sprite.png';
+$icon-inst: (190px, 140px, -190px, -140px, 18px, 18px, 208px, 191px, 'images/sprite.png', 'icon-inst', );
+$icon-plus-hover-name: 'icon-plus-hover';
+$icon-plus-hover-x: 145px;
+$icon-plus-hover-y: 160px;
+$icon-plus-hover-offset-x: -145px;
+$icon-plus-hover-offset-y: -160px;
+$icon-plus-hover-width: 17px;
+$icon-plus-hover-height: 15px;
+$icon-plus-hover-total-width: 208px;
+$icon-plus-hover-total-height: 191px;
+$icon-plus-hover-image: 'images/sprite.png';
+$icon-plus-hover: (145px, 160px, -145px, -160px, 17px, 15px, 208px, 191px, 'images/sprite.png', 'icon-plus-hover', );
+$icon-plus-name: 'icon-plus';
+$icon-plus-x: 0px;
+$icon-plus-y: 176px;
+$icon-plus-offset-x: 0px;
+$icon-plus-offset-y: -176px;
+$icon-plus-width: 17px;
+$icon-plus-height: 15px;
+$icon-plus-total-width: 208px;
+$icon-plus-total-height: 191px;
+$icon-plus-image: 'images/sprite.png';
+$icon-plus: (0px, 176px, 0px, -176px, 17px, 15px, 208px, 191px, 'images/sprite.png', 'icon-plus', );
+$icon-star-red-name: 'icon-star-red';
+$icon-star-red-x: 168px;
+$icon-star-red-y: 80px;
+$icon-star-red-offset-x: -168px;
+$icon-star-red-offset-y: -80px;
+$icon-star-red-width: 33px;
+$icon-star-red-height: 30px;
+$icon-star-red-total-width: 208px;
+$icon-star-red-total-height: 191px;
+$icon-star-red-image: 'images/sprite.png';
+$icon-star-red: (168px, 80px, -168px, -80px, 33px, 30px, 208px, 191px, 'images/sprite.png', 'icon-star-red', );
+$icon-star-yellow-name: 'icon-star-yellow';
+$icon-star-yellow-x: 168px;
+$icon-star-yellow-y: 110px;
+$icon-star-yellow-offset-x: -168px;
+$icon-star-yellow-offset-y: -110px;
+$icon-star-yellow-width: 33px;
+$icon-star-yellow-height: 30px;
+$icon-star-yellow-total-width: 208px;
+$icon-star-yellow-total-height: 191px;
+$icon-star-yellow-image: 'images/sprite.png';
+$icon-star-yellow: (168px, 110px, -168px, -110px, 33px, 30px, 208px, 191px, 'images/sprite.png', 'icon-star-yellow', );
+$icon-tick-name: 'icon-tick';
+$icon-tick-x: 128px;
+$icon-tick-y: 160px;
+$icon-tick-offset-x: -128px;
+$icon-tick-offset-y: -160px;
+$icon-tick-width: 17px;
+$icon-tick-height: 15px;
+$icon-tick-total-width: 208px;
+$icon-tick-total-height: 191px;
+$icon-tick-image: 'images/sprite.png';
+$icon-tick: (128px, 160px, -128px, -160px, 17px, 15px, 208px, 191px, 'images/sprite.png', 'icon-tick', );
+$icon-tw-name: 'icon-tw';
+$icon-tw-x: 168px;
+$icon-tw-y: 140px;
+$icon-tw-offset-x: -168px;
+$icon-tw-offset-y: -140px;
+$icon-tw-width: 22px;
+$icon-tw-height: 18px;
+$icon-tw-total-width: 208px;
+$icon-tw-total-height: 191px;
+$icon-tw-image: 'images/sprite.png';
+$icon-tw: (168px, 140px, -168px, -140px, 22px, 18px, 208px, 191px, 'images/sprite.png', 'icon-tw', );
+$icon-vk-big-hover-name: 'icon-vk-big-hover';
+$icon-vk-big-hover-x: 168px;
+$icon-vk-big-hover-y: 0px;
+$icon-vk-big-hover-offset-x: -168px;
+$icon-vk-big-hover-offset-y: 0px;
+$icon-vk-big-hover-width: 40px;
+$icon-vk-big-hover-height: 40px;
+$icon-vk-big-hover-total-width: 208px;
+$icon-vk-big-hover-total-height: 191px;
+$icon-vk-big-hover-image: 'images/sprite.png';
+$icon-vk-big-hover: (168px, 0px, -168px, 0px, 40px, 40px, 208px, 191px, 'images/sprite.png', 'icon-vk-big-hover', );
+$icon-vk-big-name: 'icon-vk-big';
+$icon-vk-big-x: 128px;
+$icon-vk-big-y: 40px;
+$icon-vk-big-offset-x: -128px;
+$icon-vk-big-offset-y: -40px;
+$icon-vk-big-width: 40px;
+$icon-vk-big-height: 40px;
+$icon-vk-big-total-width: 208px;
+$icon-vk-big-total-height: 191px;
+$icon-vk-big-image: 'images/sprite.png';
+$icon-vk-big: (128px, 40px, -128px, -40px, 40px, 40px, 208px, 191px, 'images/sprite.png', 'icon-vk-big', );
+$icon-yt-name: 'icon-yt';
+$icon-yt-x: 168px;
+$icon-yt-y: 158px;
+$icon-yt-offset-x: -168px;
+$icon-yt-offset-y: -158px;
+$icon-yt-width: 22px;
+$icon-yt-height: 18px;
+$icon-yt-total-width: 208px;
+$icon-yt-total-height: 191px;
+$icon-yt-image: 'images/sprite.png';
+$icon-yt: (168px, 158px, -168px, -158px, 22px, 18px, 208px, 191px, 'images/sprite.png', 'icon-yt', );
+$spritesheet-width: 208px;
+$spritesheet-height: 191px;
+$spritesheet-image: 'images/sprite.png';
+$spritesheet-sprites: ($icon-ball, $icon-fb-big-hover, $icon-fb-big, $icon-fb, $icon-inst-big-hover, $icon-inst-big, $icon-inst, $icon-plus-hover, $icon-plus, $icon-star-red, $icon-star-yellow, $icon-tick, $icon-tw, $icon-vk-big-hover, $icon-vk-big, $icon-yt, );
+$spritesheet: (208px, 191px, 'images/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

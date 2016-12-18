@@ -1,0 +1,84 @@
+.card {
+	position: relative;
+	width: 100%;
+	background: url('images/card-border.png') top left repeat-y,
+				url('images/card-border.png') top -20px right repeat-y;
+	background-color: #ffffff;
+	border-radius: 20px;
+	color: #0c1a39;
+	padding: 30px 30px 0;
+	transition: opacity 0.3s, transform 0.3s;
+		
+	@media (min-width: $screen-xs) {
+		padding: 40px 40px 0;
+	}
+	@media (min-width: $screen-md) {
+		padding: 0;
+	}
+	
+	&__wrapper {
+		position: relative;
+		padding-bottom: 380px;
+	}
+	
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	&__col {
+		padding: 0 $grid-gutter-width/2;
+		@include flex-default(center,center);
+		
+		@media (max-width: $screen-md - 1){
+			&:first-of-type {
+				order: 2;
+			}
+		}
+	}
+	
+	&__img {
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+	
+	&__content {
+		min-width: 0;
+		max-width: 100%;
+		
+		@media (min-width: $screen-md) {
+			padding-right: 40px;
+		}
+	}
+	
+	&__addr {
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 600;
+		@media (min-width: $screen-xs) {
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+	
+	&__title {
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 900;
+		margin-bottom: 24px;
+		
+		@media (min-width: $screen-xs) {
+			font-size: 35px;
+			line-height: 41px;
+		}
+		@media (min-width: $screen-sm) {
+			font-size: 38px;
+		}
+	}
+	
+	&__text {
+		max-width: 430px;
+	}
+}

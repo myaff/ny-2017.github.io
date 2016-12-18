@@ -1,0 +1,18 @@
+@mixin fonts($font-name, $file-name, $weight, $variant, $path: $fonts-path){
+	font-family: $font-name;
+	src: url($path + $file-name + '.eot');
+	src: local('☺'),
+		 url($path + $file-name + '.eot?#iefix') format('embedded-opentype'),
+		 url($path + $file-name + '.woff') format('woff'), 
+		 url($path + $file-name + '.ttf') format('truetype'),
+		 url($path + $file-name + '.otf') format('opentype'),
+		 url($path + $file-name + '.svg') format('svg');
+	font-weight: $weight;
+	font-style: $variant;
+}
+
+@each $font-name, $file-name, $weight, $variant in map-values($fonts) {
+	@font-face {
+		@include fonts($font-name, $file-name, $weight, $variant);
+	}
+}

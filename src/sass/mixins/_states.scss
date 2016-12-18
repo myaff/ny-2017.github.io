@@ -1,0 +1,23 @@
+@mixin gradient($topColor, $bottomColor, $dir: to bottom) {
+	background: linear-gradient($dir, #{$topColor} 0%, #{$bottomColor} 100%);
+	@if ($dir == to bottom) {
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$topColor}', endColorstr='#{$bottomColor}');
+	} else {
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$bottomColor}', endColorstr='#{$topColor}');
+	}
+}
+@mixin active-gradient($dir: to bottom) {
+	@include gradient(#3ba3fb, #0060b1, $dir);
+}
+
+@mixin primary-gradient($dir: to bottom) {
+	@include gradient(#f55d28, #c42c2c, $dir);
+}
+
+@mixin active-shadow($size, $dir: top){
+	$k: 1;
+	@if ($dir != top) {
+		$k: -1;
+	}
+	box-shadow: inset 0 ($k * $size) 0 rgba(0,0,0,0.32);
+}

@@ -1,0 +1,75 @@
+.envelope {
+
+	position: relative;
+	width: 100%;
+	width: calc(100% + #{$font-size});
+	margin-left: -1* $font-size / 2;
+	margin-right: -1* $font-size / 2;
+	
+	@media (min-width: $screen-sm) {
+		width: 100%;
+		margin: 0 auto;
+	}
+	@media (min-width: 1122px) {
+		padding: 0 $font-size;
+	}
+
+	&__wrapper {
+		margin-top: 190px;
+		@media (min-width: $screen-sm) {
+			width: 94%;
+		}
+		@media (min-width: 1122px) {
+			width: $container-md + $grid-gutter-width * 2 + $font-size * 2;
+		}
+	}
+	
+	&__back {
+		@include absolute(bottom 0 left 0);
+		@include size(calc(100% + #{$font-size * 2}), 463px);
+		margin-left: -1 * $font-size;
+		background: #9bbada;
+		
+		@media (min-width: $screen-sm) {
+			width: 88.6vw;
+			margin-left: calc(-1* (88.6vw - 100%)/2);
+		}
+		@media (min-width: 1122px) {
+			width: 100%;
+			margin-left: 0;
+		}
+		
+		&::before {
+			content: '';
+			display: block;
+			@include absolute(bottom 100% left 0);
+			@include size(100%, 380px);
+			background: url('images/envelope-back.png') bottom center no-repeat;
+			background-size: 100% auto;
+		}
+	}
+	
+	&__front {
+		@include absolute(bottom 0 left 0);
+		@include size(100vw, 518px);
+		margin-left: calc(-1* (50vw - 50%));
+		padding-top: 335px;
+		background: url('images/envelope-front-xs.png') bottom center no-repeat;
+		background-size: 100% 100%;
+		
+		@media (min-width: $screen-sm) {
+			background: url('images/envelope-front.png') bottom center no-repeat;
+			background-size: 100% 100%;
+		}
+		@media (min-width: 1122px) {
+			@include size(1122px, 518px);
+			left: 50%;
+			margin-left: -561px;
+		}
+	}
+	
+	&__soc {
+		position: relative;
+		z-index: 2;
+	}
+}
