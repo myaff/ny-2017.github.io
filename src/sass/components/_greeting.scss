@@ -3,7 +3,7 @@
 		font-size: 30px;
 		line-height: 36px;
 		font-weight: 900;
-		margin-bottom: 0.8em;
+		margin-bottom: 0.7em;
 		
 		@media (min-width: $screen-sm) {
 			font-size: 40px;
@@ -29,8 +29,13 @@
 			margin-top: 2em;
 			
 			@media (min-width: $screen-md) {
-				margin-top: 3.5em;
+				margin-top: 3.4em;
 			}
 		}
+	}
+	
+	&__text-wrapper {
+		width: 100%;
+		max-width: 815px;
 	}
 }

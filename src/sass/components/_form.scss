@@ -1,8 +1,11 @@
 .form {
 
+	$form-border-radius: 80px;
+	
 	background: rgba(18,42,100,0.7);
 	box-shadow: 0 0 100px 3px rgba(0,138,255,0.33);
-	border-radius: 50px;
+	border-radius: $form-border-radius;
+	
 	
 	@media (max-width: $screen-sm - 1) {
 		max-width: 320px;
@@ -12,14 +15,14 @@
 	
 	
 	&__wrapper {
-		margin-top: 130px;
+		margin-top: 120px;
 		transition: opacity 0.3s, transform 0.3s;
 	}
 	
 	&__footer {
 		padding: 30px;
 		background: rgba(0,0,0,0.2);
-		border-radius: 0 0 50px 50px;
+		border-radius: 0 0 $form-border-radius $form-border-radius;
 	}
 	
 	&__title {
@@ -27,7 +30,7 @@
 		line-height: 36px;
 		font-weight: 900;
 		text-align: center;
-		margin-bottom: 1em;
+		margin-bottom: 1.4em;
 		
 		@media (min-width: $screen-sm) {
 			font-size: 36px;
@@ -81,14 +84,14 @@
 	}
 	
 	&__col:first-of-type &__item.top &__label {
-		border-top-left-radius: 50px;
+		border-top-left-radius: $form-border-radius;
 		
 		@media (max-width: $screen-sm - 1) {
-			border-top-right-radius: 50px;
+			border-top-right-radius: $form-border-radius;
 			
 			.form__check-mark {
-				top: 20px;
-				right: 20px;
+				top: 33px;
+				right: 35px;
 			}
 		}
 	}
@@ -101,8 +104,8 @@
 			border-top-right-radius: 50px;
 			
 			.form__check-mark {
-				top: 20px;
-				right: 20px;
+				top: 33px;
+				right: 35px;
 			}
 		}
 		&__col:nth-last-of-type(2) &__item:nth-of-type(2n + 1) {
@@ -128,11 +131,11 @@
 	
 	&__col:nth-last-of-type(2) &__item.top &__label {
 		@media (min-width: $screen-md) {
-			border-top-right-radius: 50px;
+			border-top-right-radius: $form-border-radius;
 		
 			.form__check-mark {
-				top: 20px;
-				right: 20px;
+				top: 33px;
+				right: 35px;
 			}
 		}
 	}
@@ -148,7 +151,7 @@
 		@include flex-default(center, center);
 		position: relative;
 		min-height: 145px;
-		padding: 40px;
+		padding: 35px;
 		cursor: pointer;
 		
 		
@@ -254,7 +257,15 @@
 			padding-left: 80px;
 		}
 		&-img.right + &-text {
-			padding-right: 80px;
+			padding-right: 120px;
+		}
+	}
+	&__item-14 &__label-img.left + &__label-text {
+		padding-left: 30px;
+	}
+	@media (min-width: $screen-md) {
+		.page.role-100 &__item.top &__label {
+			min-height: 160px;
 		}
 	}
 	
@@ -280,11 +291,12 @@
 		font-size: 22px;
 		font-weight: 800;
 		line-height: 25px;
-		margin-bottom: 1em;
+		margin-bottom: 18px;
+		margin-left: 13px;
 	}
 	
 	&__item--fieldset {
-		padding: 25px 5px 33px 15px;
+		padding: 25px 5px 28px 15px;
 	}
 	
 }
