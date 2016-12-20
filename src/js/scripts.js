@@ -80,7 +80,7 @@ function fillCard(card){
 	}
 	$('.img-placeholder').html('<img src="'+card.fullImg+'" alt="New Year Picture"/>');
 	$('meta[property="og:description"]').attr('content', card.hashTags);
-	$('meta[property="og:image"]').attr('content', location.host+location.pathname+card.fullImg);
+	$('meta[property="og:image:url"]').attr('content', location.host+location.pathname+card.fullImg);
 };
 function clearCard(){
 	$('#card-img').html('');
