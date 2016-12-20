@@ -80,7 +80,7 @@ function fillCard(card){
 	}
 	$('.img-placeholder').html('<img src="'+card.fullImg+'" alt="New Year Picture"/>');
 	$('meta[property="og:description"]').attr('content', card.hashTags);
-	$('meta[property="og:image"]').attr('content', location.host+'/'+card.fullImg);
+	$('meta[property="og:image"]').attr('content', location.host+'location.pathname+card.fullImg);
 };
 function clearCard(){
 	$('#card-img').html('');
@@ -191,7 +191,7 @@ function compare(arr){
 function updateShareButtons(hashTags, img){
 	var title = $('meta[property="og:title"]').attr('content');
 	var url = location.href;
-	var fullImgPath = location.host+'/'+img;
+	var fullImgPath = location.host+loaction.pathname+img;
 	console.log(url, fullImgPath);
 	updateVKButton(url, title, hashTags, fullImgPath);
 	updateFBButton(url, title, hashTags, fullImgPath);
