@@ -191,7 +191,7 @@ function compare(arr){
 function updateShareButtons(hashTags, img){
 	var title = $('meta[property="og:title"]').attr('content');
 	var url = location.href;
-	var fullImgPath = location.host+loaction.pathname+img;
+	var fullImgPath = location.host+location.pathname+img;
 	console.log(url, fullImgPath);
 	updateVKButton(url, title, hashTags, fullImgPath);
 	updateFBButton(url, title, hashTags, fullImgPath);
