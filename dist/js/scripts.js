@@ -1,6 +1,16 @@
 $(document).ready(function(){
 	$('.svg-placeholder').html(SVG_SPRITE);
 	
+	$.ajaxSetup({ cache: true });
+		$.getScript('//connect.facebook.net/ru_RU/sdk.js', function(){
+			FB.init({
+				appId: '1176530762424849',
+				version: 'v2.5'
+			});     
+		//$('#loginbutton,#feedbutton').removeAttr('disabled');
+		//FB.getLoginStatus(updateStatusCallback);
+	});
+	
 	$('.form__checkbox').on('change', function(){
 		$(this).parent('label').toggleClass('active');
 	});
@@ -178,11 +188,13 @@ function compare(arr){
 	};
 };
 
-function updateShareButtons(desc, img){
+function updateShareButtons(hashTags, img){
 	var title = $('meta[property="og:title"]').attr('content');
 	var url = location.href;
-	console.log(url, img);
-	updateVKButton(url, title, desc, img);
+	var fullImgPath = location.host+'/'+img;
+	//console.log(fullImgPath);
+	updateVKButton(url, title, hashTags, fullImgPath);
+	updateFBButton(url, title, hashTags, fullImgPath);
 };
 function updateVKButton(url, title, desc, img){
 	$('#vk-share-button').html(VK.Share.button({
@@ -190,9 +202,21 @@ function updateVKButton(url, title, desc, img){
 		'title': title,
 		'description': desc,
 		'image': img,
-		//'noparse': true
+		'noparse': true
 	},{
 		'type': 'custom',
 		'text': '<svg class="icon"><use xlink:href="#vk"/></svg>'
 	}));
+};
+function updateFBButton(url, title, desc, img){
+	var appID = 1176530762424849;
+	$('#fb-share-button > a').attr('href', 'https://www.facebook.com/sharer/sharer.php?u='+url+'&src=sdkpreparse');
+	/*FB.ui({
+		method: 'share',
+		href: url,
+		display: 'popup',
+		href: url,
+		hashtag: desc,
+		mobile_iframe: true
+	}, function(response){});*/
 };
