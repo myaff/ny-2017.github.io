@@ -68,6 +68,7 @@ function fillCard(card){
 	if(card.text){
 		$('#card-content').append('<div class="card__text">'+card.text+'</div>');
 	}
+	$('.img-placeholder').html('<img src="'+card.fullImg+'" alt="New Year Picture"/>');
 	$('meta[property="og:description"]').attr('content', card.hashTags);
 	$('meta[property="og:image"]').attr('content', card.fullImg);
 };
@@ -80,7 +81,7 @@ function getCard(activeCard){
 	$('html, body').animate({scrollTop: $('.envelope')[0].offsetTop - 50}, 'slow');
 	$('#card').removeClass('invis');
 	location.hash = activeCard.urlHash;
-	updateShareButtons(activeCard.desc, activeCard.fullImg);
+	updateShareButtons(activeCard.hashTags, activeCard.fullImg);
 };
 
 function getCardVariant(role,arrValues){
@@ -180,6 +181,7 @@ function compare(arr){
 function updateShareButtons(desc, img){
 	var title = $('meta[property="og:title"]').attr('content');
 	var url = location.href;
+	console.log(url, img);
 	updateVKButton(url, title, desc, img);
 };
 function updateVKButton(url, title, desc, img){
@@ -188,7 +190,7 @@ function updateVKButton(url, title, desc, img){
 		'title': title,
 		'description': desc,
 		'image': img,
-		'noparse': true
+		//'noparse': true
 	},{
 		'type': 'custom',
 		'text': '<svg class="icon"><use xlink:href="#vk"/></svg>'
