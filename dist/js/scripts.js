@@ -80,6 +80,7 @@ function getCard(activeCard){
 	$('html, body').animate({scrollTop: $('.envelope')[0].offsetTop - 50}, 'slow');
 	$('#card').removeClass('invis');
 	location.hash = activeCard.urlHash;
+	updateShareButtons(activeCard.desc, activeCard.fullImg);
 };
 
 function getCardVariant(role,arrValues){
@@ -174,4 +175,22 @@ function compare(arr){
 	return function(number) {
 		return !!~arr.indexOf(number);
 	};
+};
+
+function updateShareButtons(desc, img){
+	var title = $('meta[property="og:title"]').attr('content');
+	var url = location.href;
+	updateVKButton(url, title, desc, img);
+};
+function updateVKButton(url, title, desc, img){
+	$('#vk-share-button').html(VK.Share.button({
+		'url': url,
+		'title': title,
+		'description': desc,
+		'image': img,
+		'noparse': true
+	},{
+		'type': 'custom',
+		'text': '<svg class="icon"><use xlink:href="#vk"/></svg>'
+	}));
 };

@@ -13,7 +13,7 @@
 		}
 	}
 	
-	&__link {
+	&__item a {
 		display: block;
 		font-size: 40px;
 		@include size(1em);
@@ -24,8 +24,8 @@
 		}
 	}
 	
-	&__link.fb,
-	&__link.vk {
+	&__item.fb a,
+	&__item.vk a {
 		@include hover {
 			.icon {
 				color: #475993;
@@ -33,7 +33,7 @@
 		}
 	}
 	
-	&__link.inst {
+	&__item.inst a {
 		@include hover {
 			background: url('images/inst.png') center no-repeat;
 			.icon {
