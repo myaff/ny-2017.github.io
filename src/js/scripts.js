@@ -202,7 +202,7 @@ function updateVKButton(url, title, desc, img){
 		'title': title,
 		'description': desc,
 		'image': img,
-		'noparse': true
+		//'noparse': true
 	},{
 		'type': 'custom',
 		'text': '<svg class="icon"><use xlink:href="#vk"/></svg>'
